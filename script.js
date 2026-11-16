@@ -152,9 +152,17 @@
   // Show a friendly note if example.png is missing
   var exampleImg = document.getElementById("example-img");
   var exampleMissing = document.getElementById("example-missing");
+  // Tries these names in order, so a double extension still works
+  var imageCandidates = ["example.png", "example.png.png", "example.jpg", "example.jpeg"];
+  var imageIndex = 0;
   function imageMissing() {
-    exampleImg.hidden = true;
-    exampleMissing.hidden = false;
+    imageIndex += 1;
+    if (imageIndex < imageCandidates.length) {
+      exampleImg.src = imageCandidates[imageIndex];
+    } else {
+      exampleImg.hidden = true;
+      exampleMissing.hidden = false;
+    }
   }
   exampleImg.addEventListener("error", imageMissing);
   if (exampleImg.complete && exampleImg.naturalWidth === 0) { imageMissing(); }
