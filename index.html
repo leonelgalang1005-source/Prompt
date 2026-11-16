@@ -62,6 +62,7 @@
             <button type="button" class="btn btn-ghost" id="btn-no">NO, THANKS</button>
           </div>
           <div class="example-row">
+            <button type="button" class="btn btn-gift" id="btn-official"><span aria-hidden="true">🎁</span> OFFICIAL PROMPT</button>
             <button type="button" class="btn btn-soft" id="btn-example"><span aria-hidden="true">🖼️</span> MY EXAMPLE PROJECT</button>
           </div>
         </div>
@@ -90,6 +91,35 @@
           <h2 id="no-title" tabindex="-1">Maybe next time! 🌷</h2>
           <p class="lead">Thanks for visiting Promptly. Have a lovely day!</p>
           <button type="button" class="btn btn-primary" data-go="home">Back to Home</button>
+        </div>
+      </section>
+
+      <!-- OFFICIAL PROMPT QUIZ -->
+      <section class="screen" id="screen-official" data-step="1" hidden aria-labelledby="official-title">
+        <div class="card card-center">
+          <div class="quiz-dots" id="quiz-dots" aria-hidden="true"></div>
+          <p class="quiz-count" id="quiz-count">Question 1 of 5</p>
+          <h2 id="official-title" tabindex="-1">Official Prompt</h2>
+          <p class="muted" id="quiz-hint">Answer all five questions correctly to unlock it.</p>
+          <div id="quiz-body"></div>
+          <p class="quiz-feedback" id="quiz-feedback" role="status" aria-live="polite"></p>
+          <div class="btn-row">
+            <button type="button" class="btn btn-link" data-go="home">← Back to Home</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- OFFICIAL PROMPT UNLOCKED -->
+      <section class="screen" id="screen-prize" data-step="3" hidden aria-labelledby="prize-title">
+        <div class="card card-center">
+          <div class="big-emoji bounce" aria-hidden="true">🎉</div>
+          <h2 id="prize-title" tabindex="-1">You unlocked the official prompt! 🎁</h2>
+          <p class="muted">Copy it and paste it into your favorite AI chat.</p>
+          <pre class="prompt-box" id="prompt-text" tabindex="0" aria-label="Official prompt text"></pre>
+          <button type="button" class="btn btn-primary btn-wide" id="btn-copy-prompt">COPY PROMPT</button>
+          <div class="btn-row">
+            <button type="button" class="btn btn-ghost" data-go="home">Back to Home</button>
+          </div>
         </div>
       </section>
 
