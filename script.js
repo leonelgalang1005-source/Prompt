@@ -7,8 +7,8 @@
   /* ---------- OFFICIAL PROMPT quiz settings (edit the answers here) ---------- */
   var BIRTHDAY = { month: 10, day: 5 }; // October 5
   var QUIZ = [
-    { type: "birthday", text: "When is my birthday?", hint: "Type it like: October 5" },
-    { type: "choice", text: "Who is my crush?", options: ["Ruellah", "Wella"], answer: "Wella" },
+    { type: "birthday", text: "When is my birthday?", hint: "Type it like: October 27" },
+    { type: "choice", text: "Who is my crush?", options: ["Ruellah", "Wella"], answer: "Ruellah" },
     { type: "choice", text: "What does Leo wear?", options: ["Baggy jeans", "Skinny jeans"], answer: "Baggy jeans" },
     { type: "choice", text: "What is my favorite line?", options: ["Ywa", "Yeah~"], answer: "Yeah~" },
     { type: "choice", text: "Is he handsome or not?", options: ["Handsome", "Not"], answer: "Handsome" }
