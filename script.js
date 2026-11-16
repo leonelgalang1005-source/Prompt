@@ -8,6 +8,7 @@
   var screens = {
     home: document.getElementById("screen-home"),
     no: document.getElementById("screen-no"),
+    example: document.getElementById("screen-example"),
     payment: document.getElementById("screen-payment"),
     gcash: document.getElementById("screen-gcash"),
     personal: document.getElementById("screen-personal")
@@ -146,6 +147,17 @@
   /* ---------- Wire up buttons ---------- */
   document.getElementById("btn-yes").addEventListener("click", function () { go("payment"); });
   document.getElementById("btn-no").addEventListener("click", function () { go("no"); });
+  document.getElementById("btn-example").addEventListener("click", function () { go("example"); });
+
+  // Show a friendly note if example.png is missing
+  var exampleImg = document.getElementById("example-img");
+  var exampleMissing = document.getElementById("example-missing");
+  function imageMissing() {
+    exampleImg.hidden = true;
+    exampleMissing.hidden = false;
+  }
+  exampleImg.addEventListener("error", imageMissing);
+  if (exampleImg.complete && exampleImg.naturalWidth === 0) { imageMissing(); }
   document.getElementById("pay-online").addEventListener("click", function () { go("gcash"); });
   document.getElementById("pay-personal").addEventListener("click", function () { go("personal"); });
   document.getElementById("btn-done").addEventListener("click", function () { go("home"); });
